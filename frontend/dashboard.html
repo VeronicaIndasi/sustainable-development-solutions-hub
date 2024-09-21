@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Solutions Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Welcome to the Sustainable Development Solutions Hub</h1>
+    <h1>Dashboard</h1>
+    <a href="profile.html">Profile</a> | <a href="index.html">Logout</a>
+
+    <div id="solutionsList">
+        <h2>Your Solutions</h2>
+        <ul id="userSolutions"></ul>
+    </div>
+    
+    <form id="solutionForm">
+        <h3>Submit a New Solution</h3>
+        <input type="text" id="title" placeholder="Solution Title" required>
+        <br>
+        <textarea id="description" placeholder="Solution Description" required></textarea>
+        <br>
+        <button type="submit">Submit Solution</button>
+    </form>
+
+    <div id="solutionsList">
+        <h2>Available Solutions</h2>
+        <ul id="solutions"></ul>
+    </div>
+
+    <div id="userComments">
+        <h2>User Comments</h2>
+        <div id="commentSection"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

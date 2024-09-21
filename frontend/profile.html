@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Your Profile</h1>
+    <img src="user-3331256_1920.png" id="profilePicture">
+    <div id="userProfile">
+        <h2 id="usernameDisplay"></h2>
+        <p>Name: <span id="nameDisplay"></span></p>
+        <p>Username: <span id="username"></span></p>
+        <p>Email: <span id="emailDisplay"></span></p>
+        
+        <h3>About</h3>
+        <textarea id="bio" placeholder="Enter your bio here!" rows="5" cols="40"></textarea>
+        
+        <br>
+        <button onclick="editProfile()">Edit Profile</button>
+    </div>
+    
+    <script src="js/profile.js"></script>
+</body>
+</html>
+
