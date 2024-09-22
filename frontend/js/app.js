@@ -1,10 +1,11 @@
+// Function to load the current user's solutions
 function loadUserSolutions() {
     const userId = 1; 
     fetch(`http://localhost:4000/users/${userId}/solutions`)
         .then(response => response.json())
         .then(data => {
             const userSolutionsList = document.getElementById('userSolutions');
-            userSolutionsList.innerHTML = ''; 
+            userSolutionsList.innerHTML = '';
 
             data.forEach(solution => {
                 const li = document.createElement('li');
@@ -61,6 +62,7 @@ document.getElementById('solutionForm').addEventListener('submit', function(even
     .catch(error => console.error('Error submitting solution:', error));
 });
 
+
 function upvoteSolution(solutionId) {
     const userId = 1; 
     fetch('http://localhost:4000/upvote', {
@@ -106,7 +108,7 @@ function submitComment(solutionId) {
     .then(response => response.json())
     .then(data => {
         console.log(data.message);
-        loadAvailableSolutions(); 
+        loadAvailableSolutions();
     })
     .catch(error => console.error('Error submitting comment:', error));
 }
@@ -116,8 +118,8 @@ function loadComments(solutionId) {
         .then(response => response.json())
         .then(comments => {
             const commentsDiv = document.getElementById(`comments-${solutionId}`);
-            commentsDiv.innerHTML = ''; 
-            
+            commentsDiv.innerHTML = '';
+
             comments.forEach(comment => {
                 const p = document.createElement('p');
                 p.textContent = comment.text;

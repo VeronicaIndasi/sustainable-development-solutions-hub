@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Welcome to the Sustainable Development Solutions Hub</h1>
-    <a href="login.html">Login</a> |
-<br>
-    <a href="register.html">Register</a>
+    <div class="container">
+        <h1>Welcome to the Sustainable Development Solutions Hub</h1>
 
-    <div id="solutionsList">
+        <div>
+            <img src="ai-generated-8832217_1920.jpg"> 
+            <img src="arrows-8841234_1920.jpg">
+            <img src="environment-7412967_1920.jpg">
+        </div>
+
+        <div class="auth-box">
+            <a href="login.html">Login</a>
+            <span>|</span>
+            <a href="register.html">Register</a>
+        </div>
+
+        <h2>Submit Your Solution</h2>
+        <form id="solutionForm">
+            <input type="text" id="title" placeholder="Solution Title" required><br>
+            <textarea id="description" placeholder="Solution Description" required></textarea><br>
+            <button type="submit">Submit Solution</button>
+        </form>
+
+        <h2>Your Solutions</h2>
+        <ul id="userSolutions"></ul>
+
         <h2>Available Solutions</h2>
         <ul id="solutions"></ul>
     </div>
@@ -20,4 +39,3 @@
     <script src="js/app.js"></script>
 </body>
 </html>
-

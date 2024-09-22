@@ -115,6 +115,24 @@ app.post('/comment', (req, res) => {
     });
 });
 
+//backend connection
+app.get('/api/profile', (req, res) => {
+    const userProfile = {
+        name: 'John Doe',
+        username: 'johndoe123',
+        email: 'john.doe@example.com',
+        bio: 'A passionate developer working on sustainable solutions.',
+    };
+    res.json(userProfile); 
+});
+
+app.post('/api/solutions', (req, res) => {
+    const { title, description } = req.body;
+
+    res.status(201).json({ message: 'Solution submitted successfully!' });
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

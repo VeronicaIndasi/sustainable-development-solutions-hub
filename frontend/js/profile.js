@@ -1,5 +1,3 @@
-// profile.js
-
 document.addEventListener('DOMContentLoaded', loadProfile);
 
 function loadProfile() {
@@ -38,3 +36,23 @@ function editProfile() {
     });
 }
 
+
+// backend connection
+async function getUserProfile() {
+    try {
+        const response = await fetch('/api/profile', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        });
+        const profileData = await response.json();
+
+        document.getElementById('nameDisplay').innerText = profileData.name;
+        document.getElementById('usernameDisplay').innerText = profileData.username;
+        document.getElementById('emailDisplay').innerText = profileData.email;
+        document.getElementById('bio').value = profileData.bio;
+    } catch (error) {
+        console.error('Error fetching profile:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', getUserProfile);
